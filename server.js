@@ -48,6 +48,14 @@ app.post("/notes", (req, res) => {
     res.status(201).json(newNote);
 });
 
+
+app.get("/about", (req, res) => {
+    res.json({
+        project: "DevOps CI/CD Pipeline",
+        version: "1.0.0"
+    });
+});
+
 // Start server
 if (require.main === module) {
     app.listen(PORT, () => {
